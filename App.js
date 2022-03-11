@@ -10,9 +10,18 @@ export default function App() {
   function somar(){
     setResultado (parseFloat(valor1) + parseFloat(valor2));
   }
+  function subtrair(){
+    setResultado (parseFloat(valor1) - parseFloat(valor2));
+  }
+  function multiplicar(){
+    setResultado (parseFloat(valor1) * parseFloat(valor2));
+  }
+  function dividir(){
+    setResultado (parseFloat(valor1) / parseFloat(valor2));
+  }
   return (
     <View style={styles.container}>
-      <Text style={styles.texto}>Olá mundo!</Text>
+      <Text style={styles.texto}>Testes!!!</Text>
       <View style={styles.bloco}>
         <Text style={styles.textoBloco}>Valor 1</Text>
         <TextInput 
@@ -37,6 +46,30 @@ export default function App() {
           onPress={somar}
           >
             <Text style={styles.textoBotao}>Somar</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.bloco}>
+        <TouchableOpacity 
+          style={styles.botao}
+          onPress={subtrair}
+          >
+            <Text style={styles.textoBotao}>Subtrair</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.bloco}>
+        <TouchableOpacity 
+          style={styles.botao}
+          onPress={multiplicar}
+          >
+            <Text style={styles.textoBotao}>Multiplicar</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.bloco}>
+        <TouchableOpacity 
+          style={styles.botao}
+          onPress={dividir}
+          >
+            <Text style={styles.textoBotao}>Dividir</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.bloco}>
